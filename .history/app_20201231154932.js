@@ -1,6 +1,5 @@
 import { Ripple } from "./ripple.js";
 import { Dot } from "./dot.js";
-import { collide } from "./utils.js";
 
 class App {
   constructor() {
@@ -124,20 +123,6 @@ class App {
         const pixelX = Math.max(Math.min(x, this.stageWidth), 0);
 
         const pixelIndex = (pixelX + pixelY * this.stageWidth) * 4;
-        const red = this.imgData.data[pixelIndex + 0];
-        const green = this.imgData.data[pixelIndex + 1];
-        const blue = this.imgData.data[pixelIndex + 2];
-
-        const dot = new Dot(
-          x,
-          y,
-          this.radius,
-          this.pixelSize,
-          red,
-          green,
-          blue
-        );
-        this.dots.push(dot);
       }
     }
   }
@@ -146,15 +131,6 @@ class App {
     window.requestAnimationFrame(this.animate.bind(this));
 
     this.ripple.animate(this.ctx);
-
-    for (let i = 0; i < this.dots.length; i++) {
-      const dot = this.dots[i];
-      if (
-        collide(dot.x, dot.y, this.ripple.x, this.ripple.y, this.ripple.radius)
-      ) {
-        dot.animate(this.ctx);
-      }
-    }
   }
 
   onClick(e) {

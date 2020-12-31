@@ -1,6 +1,5 @@
 import { Ripple } from "./ripple.js";
 import { Dot } from "./dot.js";
-import { collide } from "./utils.js";
 
 class App {
   constructor() {
@@ -149,11 +148,6 @@ class App {
 
     for (let i = 0; i < this.dots.length; i++) {
       const dot = this.dots[i];
-      if (
-        collide(dot.x, dot.y, this.ripple.x, this.ripple.y, this.ripple.radius)
-      ) {
-        dot.animate(this.ctx);
-      }
     }
   }
 

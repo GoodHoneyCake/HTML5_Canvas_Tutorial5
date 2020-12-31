@@ -152,7 +152,6 @@ class App {
       if (
         collide(dot.x, dot.y, this.ripple.x, this.ripple.y, this.ripple.radius)
       ) {
-        dot.animate(this.ctx);
       }
     }
   }
