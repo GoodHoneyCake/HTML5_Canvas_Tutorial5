@@ -25,7 +25,7 @@ export class Ripple {
     ctx.beginPath();
     ctx.fillStyle = "#00ff00";
     ctx.arc(this.x, this.y, this.radius, Math.PI * 2, false);
-    ctx.fill();
+    ctx.fill;
   }
 
   getMax(x, y) {

@@ -85,7 +85,7 @@ class App {
   onClick(e) {
     this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
 
-    this.ctx.drawImage(
+    his.ctx.drawImage(
       this.image,
       0,
       0,
