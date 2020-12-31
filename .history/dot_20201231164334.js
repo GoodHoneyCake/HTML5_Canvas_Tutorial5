@@ -1,5 +1,4 @@
 const PI2 = Math.PI * 2;
-const BOUNCE = 0.82;
 
 export class Dot {
   constructor(x, y, radius, pixelSize, red, green, blue) {
@@ -27,7 +26,7 @@ export class Dot {
     const accel = (this.targetRadius - this.radius) / 2;
     this.radiusV += accel;
     this.radiusV *= BOUNCE;
-    this.radius += this.radiusV;
+    this.radiusV += this.radiusV;
 
     ctx.beginPath();
     ctx.fillStyle = `rgb(${this.red},${this.green},${this.blue})`;
