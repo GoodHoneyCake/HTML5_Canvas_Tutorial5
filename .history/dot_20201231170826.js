@@ -16,14 +16,14 @@ export class Dot {
     this.blue = blue;
   }
   animate(ctx) {
-    // ctx.beginPath();
-    // ctx.fillStyle = "#fff";
-    // ctx.fillRect(
-    //   this.x - this.pixelSizeHalf,
-    //   this.y - this.pixelSizeHalf,
-    //   this.pixelSize,
-    //   this.pixelSize
-    // );
+    ctx.beginPath();
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(
+      this.x - this.pixelSizeHalf,
+      this.y - this.pixelSizeHalf,
+      this.pixelSize,
+      this.pixelSize
+    );
 
     const accel = (this.targetRadius - this.radius) / 2;
     this.radiusV += accel;
@@ -31,7 +31,7 @@ export class Dot {
     this.radius += this.radiusV;
 
     ctx.beginPath();
-    ctx.fillStyle = "#000"; //`rgb(${this.red},${this.green},${this.blue})`;
+    ctx.fillStyle = `rgb(${this.red},${this.green},${this.blue})`;
     ctx.arc(this.x, this.y, this.radius, 0, PI2, false);
     ctx.fill();
   }

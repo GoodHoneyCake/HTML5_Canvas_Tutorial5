@@ -150,8 +150,6 @@ class App {
   animate() {
     window.requestAnimationFrame(this.animate.bind(this));
 
-    this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
-
     this.ripple.animate();
 
     for (let i = 0; i < this.dots.length; i++) {

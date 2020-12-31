@@ -77,17 +77,17 @@ class App {
       );
       this.imgPos.y = Math.round((this.stageHeight - this.imgPos.height) / 2);
     }
-    // this.ctx.drawImage(
-    //   this.image,
-    //   0,
-    //   0,
-    //   this.image.width,
-    //   this.image.height,
-    //   this.imgPos.x,
-    //   this.imgPos.y,
-    //   this.imgPos.width,
-    //   this.imgPos.height
-    // );
+    this.ctx.drawImage(
+      this.image,
+      0,
+      0,
+      this.image.width,
+      this.image.height,
+      this.imgPos.x,
+      this.imgPos.y,
+      this.imgPos.width,
+      this.imgPos.height
+    );
 
     this.tmpCtx.drawImage(
       this.image,
@@ -140,17 +140,13 @@ class App {
           blue,
           scale
         );
-        if (dot.targetRadius > 0.1) {
-          this.dots.push(dot);
-        }
+        this.dots.push(dot);
       }
     }
   }
 
   animate() {
     window.requestAnimationFrame(this.animate.bind(this));
-
-    this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
 
     this.ripple.animate();
 
@@ -171,17 +167,17 @@ class App {
       this.dots[i].reset();
     }
 
-    // this.ctx.drawImage(
-    //   this.image,
-    //   0,
-    //   0,
-    //   this.image.width,
-    //   this.image.height,
-    //   this.imgPos.x,
-    //   this.imgPos.y,
-    //   this.imgPos.width,
-    //   this.imgPos.height
-    // );
+    this.ctx.drawImage(
+      this.image,
+      0,
+      0,
+      this.image.width,
+      this.image.height,
+      this.imgPos.x,
+      this.imgPos.y,
+      this.imgPos.width,
+      this.imgPos.height
+    );
 
     this.ripple.start(e.offsetX, e.offsetY);
   }
