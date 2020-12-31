@@ -18,7 +18,7 @@ export class Ripple {
     this.radius = 0;
     this.maxRadius = this.getMax(x, y);
   }
-  animate() {
+  animate(ctx) {
     if (this.radius < this.maxRadius) {
       this.radius += this.speed;
     }

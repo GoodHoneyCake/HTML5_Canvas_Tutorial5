@@ -13,7 +13,7 @@ export class Dot {
   }
   animate(ctx) {
     ctx.beginPath();
-    ctx.fillStyle = "#000";
+    ctx.fillStyle = "#red";
     ctx.fillRect(
       this.x - this.pixelSizeHalf,
       this.y - this.pixelSizeHalf,

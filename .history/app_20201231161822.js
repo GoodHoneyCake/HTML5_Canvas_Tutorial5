@@ -114,7 +114,7 @@ class App {
     this.dots = [];
 
     this.columns = Math.ceil(this.stageWidth / this.pixelSize);
-    this.rows = Math.ceil(this.stageHeight / this.pixelSize);
+    this.row = Math.ceil(this.stageHeight / this.pixelSize);
 
     for (let i = 0; i < this.rows; i++) {
       const y = (i + 0.5) * this.pixelSize;
@@ -146,7 +146,7 @@ class App {
   animate() {
     window.requestAnimationFrame(this.animate.bind(this));
 
-    this.ripple.animate();
+    this.ripple.animate(this.ctx);
 
     for (let i = 0; i < this.dots.length; i++) {
       const dot = this.dots[i];

@@ -58,7 +58,6 @@ class App {
       this.drawImage();
     }
   }
-
   drawImage() {
     const stageRatio = this.stageWidth / this.stageHeight;
     const imgRatio = this.image.width / this.image.height;
@@ -114,7 +113,7 @@ class App {
     this.dots = [];
 
     this.columns = Math.ceil(this.stageWidth / this.pixelSize);
-    this.rows = Math.ceil(this.stageHeight / this.pixelSize);
+    this.row = Math.ceil(this.stageHeight / this.pixelSize);
 
     for (let i = 0; i < this.rows; i++) {
       const y = (i + 0.5) * this.pixelSize;
