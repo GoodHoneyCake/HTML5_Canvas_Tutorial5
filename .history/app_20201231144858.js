@@ -28,8 +28,8 @@ class App {
     this.stageWidth = document.body.clientWidth;
     this.stageHeight = document.body.clientHeight;
 
-    this.canvas.width = this.stageWidth * this.pixelRatio;
-    this.canvas.height = this.stageHeight * this.pixelRatio;
+    this.canvasWidth = this.stageWidth * this.pixelRatio;
+    this.canvasHeight = this.stageHeight * this.pixelRatio;
     this.ctx.scale(this.pixelRatio, this.pixelRatio);
 
     if (this.isLoaded) {

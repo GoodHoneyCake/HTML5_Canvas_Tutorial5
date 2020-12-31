@@ -18,7 +18,7 @@ class App {
     };
 
     this.image = new Image();
-    this.image.src = "gogh.jpg";
+    this.image.src = "gogh1.jpg";
     this.image.onload = () => {
       this.isLoaded = true;
       this.drawImage();
